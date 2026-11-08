@@ -237,25 +237,26 @@ table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;colo
 #teamRecap .match.recap-draw small{color:#697586}
 
 
-/* BARAMUDA: fixed side navigation for match input, standings and team recap */
-#page4 .league-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:18px;align-items:start;margin-top:18px}
-#page4 .league-sidebar{position:sticky;top:16px;align-self:start;z-index:20}
-#page4 #leagueTabs{display:flex;flex-direction:column;gap:9px;margin:0;padding:0;background:transparent}
-#page4 #leagueTabs .tab{width:100%;min-height:48px;text-align:left;white-space:normal;line-height:1.35;padding:13px 14px;flex:none}
-#page4 .league-content{min-width:0}
+/* BARAMUDA: horizontal sticky navigation for match input, standings and team recap */
+#page4 .league-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start;margin-top:18px}
+#page4 .league-sidebar{position:sticky;top:0;align-self:start;z-index:100;width:100%;padding:8px 0;background:var(--theme-primary)}
+#page4 #leagueTabs{display:flex;flex-direction:row;gap:8px;margin:0;padding:0;background:var(--theme-primary);width:100%}
+#page4 #leagueTabs .tab{flex:1 1 0;width:0;min-width:0;min-height:46px;text-align:center;white-space:normal;line-height:1.25;padding:10px 8px;font-size:12px}
+#page4 .league-content{min-width:0;width:100%}
 #page4 .league-layout.cup-layout{grid-template-columns:minmax(0,1fr)}
+#page4 .league-layout.cup-layout .league-sidebar{display:none}
 #page4 .league-content>.panel:first-child{margin-top:0}
 #page4 #cupBracket{min-width:0}
 @media(max-width:700px){
- #page4 .league-layout{grid-template-columns:104px minmax(0,1fr);gap:9px;margin-top:14px}
- #page4 .league-sidebar{top:10px}
- #page4 #leagueTabs{gap:7px}
- #page4 #leagueTabs .tab{font-size:10px;padding:10px 7px;min-height:54px;text-align:center;overflow-wrap:anywhere}
+ #page4 .league-layout{grid-template-columns:minmax(0,1fr);gap:10px;margin-top:12px}
+ #page4 .league-sidebar{top:0;padding:7px 0}
+ #page4 #leagueTabs{gap:6px}
+ #page4 #leagueTabs .tab{font-size:10px;padding:10px 5px;min-height:48px;overflow-wrap:anywhere}
  #page4 .league-content>.panel{padding:11px}
 }
 @media(max-width:380px){
- #page4 .league-layout{grid-template-columns:88px minmax(0,1fr);gap:7px}
- #page4 #leagueTabs .tab{font-size:9px;padding:9px 5px}
+ #page4 #leagueTabs{gap:4px}
+ #page4 #leagueTabs .tab{font-size:9px;padding:9px 3px;min-height:46px}
 }
 
 /* Theme Studio: dua warna global */
